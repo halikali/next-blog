@@ -1,0 +1,41 @@
+@import "../../../../styles/mixins.scss";
+
+.navItem {
+  height: 50px;
+
+  @include media(web) {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include media(web) {
+      font-size: 16px;
+    }
+
+    &.active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: calc(100% - 10px);
+        height: 2px;
+        background-color: black;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        @include media(web) {
+          bottom: -32px;
+        }
+      }
+    }
+  }
+}
