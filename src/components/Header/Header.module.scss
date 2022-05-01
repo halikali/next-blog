@@ -1,0 +1,122 @@
+@import "../../../styles/mixins.scss";
+
+.header {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 20px;
+  transition: height 0.5s ease;
+  overflow: hidden;
+
+  @include media(web) {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.active {
+    height: 280px;
+    transition: height 0.5s ease;
+
+    @include media(web) {
+      height: 100px;
+    }
+
+    .navbarWrapper {
+      height: 200px;
+      transition: height 0.5s ease;
+
+      @include media(web) {
+        display: flex;
+        height: 100px;
+      }
+    }
+
+    .navbarIcon {
+      display: block;
+
+      @include media(web) {
+        display: none;
+      }
+
+      span {
+        transform: translateY(24px);
+        transition: transform 0.5s ease, opacity 0.3s ease;
+      }
+
+      .line1 {
+        transform: rotate(45deg);
+      }
+
+      .line2 {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+
+      .line3 {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+}
+
+.logoWrapper {
+  display: block;
+  width: 200px;
+  height: 40px;
+
+  @include media(web) {
+    width: 395px;
+    height: 60px;
+  }
+
+  .logo {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+.navbarWrapper {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+  transition: height 0.5s ease;
+
+  @include media(web) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+  }
+}
+
+.navbarIcon {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  @include media(web) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+  }
+}
