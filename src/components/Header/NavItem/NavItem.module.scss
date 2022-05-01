@@ -1,10 +1,10 @@
 @import "../../../../styles/mixins.scss";
 
 .navItem {
-  height: 50px;
+  height: 5rem;
 
   @include media(web) {
-    height: 58px;
+    height: 5.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,10 +13,7 @@
   a {
     text-transform: uppercase;
     font-weight: bold;
-
-    @include media(web) {
-      font-size: 16px;
-    }
+    font-size: 1.6rem;
 
     &.active {
       position: relative;
@@ -24,16 +21,16 @@
       &::after {
         content: "";
         position: absolute;
-        bottom: -20px;
+        bottom: -2rem;
         left: 0;
-        width: calc(100% - 10px);
-        height: 2px;
+        width: calc(100% - 1rem);
+        height: 0.2rem;
         background-color: black;
         margin-left: 50%;
         transform: translateX(-50%);
 
         @include media(web) {
-          bottom: -32px;
+          bottom: -3.2rem;
         }
       }
     }
