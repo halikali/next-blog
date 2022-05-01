@@ -1,0 +1,23 @@
+@mixin media($query) {
+  @if $query == only-mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $query == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $query == web {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $query == large {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}
