@@ -2,46 +2,46 @@
 
 .header {
   width: 100%;
-  height: 60px;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 10px 20px;
+  height: 6rem;
+  border-bottom: 0.1rem solid #e5e5e5;
+  padding: 1rem 2rem;
   transition: height 0.5s ease;
   overflow: hidden;
 
   @include media(web) {
-    height: 100px;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &.active {
-    height: 280px;
+    height: 28rem;
     transition: height 0.5s ease;
 
     @include media(web) {
-      height: 100px;
+      height: 10rem;
     }
 
     .navbarWrapper {
-      height: 200px;
+      height: 20rem;
       transition: height 0.5s ease;
 
       @include media(web) {
         display: flex;
-        height: 100px;
+        height: 10rem;
       }
     }
 
     .navbarIcon {
       display: block;
-
+      top: 2.7rem;
       @include media(web) {
         display: none;
       }
 
       span {
-        transform: translateY(24px);
+        transform: translateY(2rem);
         transition: transform 0.5s ease, opacity 0.3s ease;
       }
 
@@ -50,7 +50,7 @@
       }
 
       .line2 {
-        transform: translateX(-50px);
+        transform: translateX(-5rem);
         opacity: 0;
       }
 
@@ -62,17 +62,17 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .logoWrapper {
   display: block;
-  width: 200px;
-  height: 40px;
+  width: 20rem;
+  height: 4rem;
 
   @include media(web) {
-    width: 395px;
-    height: 60px;
+    width: 39.5rem;
+    height: 6rem;
   }
 
   .logo {
@@ -85,27 +85,27 @@
   width: 100%;
   height: 0;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 2rem;
   transition: height 0.5s ease;
 
   @include media(web) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
-    height: 100px;
+    gap: 1rem;
+    height: 10rem;
   }
 }
 
 .navbarIcon {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  width: 24px;
-  height: 24px;
+  gap: 0.7rem;
+  width: 2.4rem;
+  height: 2.4rem;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 2rem;
+  top: 2rem;
 
   @include media(web) {
     display: none;
@@ -114,7 +114,7 @@
   span {
     display: block;
     width: 100%;
-    height: 1px;
+    height: 0.1rem;
     background-color: #000;
     transform: translateX(0);
     transition: transform 0.5s ease;
