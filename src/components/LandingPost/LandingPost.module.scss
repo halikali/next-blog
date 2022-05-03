@@ -1,11 +1,12 @@
 @import "../../../styles/mixins.scss";
+
 .LandingPost {
   width: 100%;
 
   @include media(web) {
     margin: auto;
     width: 85.4rem;
-    height: 53.3rem;
+    height: 70rem;
   }
 
   .imageWrapper {
