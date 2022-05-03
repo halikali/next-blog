@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 const MainLayout = ({ children }) => {
@@ -6,7 +7,7 @@ const MainLayout = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-      <footer>footer</footer>
+      <Footer />
     </>
   );
 };
