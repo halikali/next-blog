@@ -7,6 +7,7 @@
   padding: 1rem 2rem;
   transition: height 0.5s ease;
   overflow: hidden;
+  margin-bottom: 7rem;
 
   @include media(web) {
     height: 10rem;
@@ -36,6 +37,7 @@
     .navbarIcon {
       display: block;
       top: 2.7rem;
+
       @include media(web) {
         display: none;
       }
@@ -71,8 +73,8 @@
   height: 4rem;
 
   @include media(web) {
-    width: 39.5rem;
-    height: 6rem;
+    width: 27.5rem;
+    height: 3rem;
   }
 
   .logo {
