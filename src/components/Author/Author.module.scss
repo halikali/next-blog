@@ -1,0 +1,50 @@
+@import "../../../styles/mixins.scss";
+
+.author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 32rem;
+  height: 7rem;
+  margin: 3rem 0 2em;
+
+  .imageWrapper {
+    width: 7rem;
+    height: 7rem;
+
+    .image {
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .textWrapper {
+    width: 100%;
+    margin-left: 2rem;
+
+    .title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: left;
+      height: 2rem;
+
+      @include media(tablet) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .createdAt {
+      font-size: 1.3rem;
+      font-weight: 400;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      height: 2rem;
+
+      @include media(tablet) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
