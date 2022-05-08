@@ -22,6 +22,7 @@ const Header = () => {
             width={200}
             height={40}
             layout="responsive"
+            alt="brand logo"
           />
         </a>
       </Link>

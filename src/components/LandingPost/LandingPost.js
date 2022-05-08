@@ -5,7 +5,7 @@ import style from "./LandingPost.module.scss";
 
 const LandingPost = () => {
   return (
-    <Link href={"post/d"}>
+    <Link href={"post/d"} passHref >
       <div className={style.LandingPost}>
         <div className={style.imageWrapper}>
           <Image
@@ -17,6 +17,7 @@ const LandingPost = () => {
             layout="responsive"
             className={style.image}
             loading={`lazy`}
+            alt="Landing Post"
           />
         </div>
         <div className={style.landingPostBody}>

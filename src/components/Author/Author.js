@@ -12,6 +12,7 @@ const Author = () => {
           height={56}
           layout="responsive"
           className={style.image}
+          alt="Author"
         />
       </div>
       <div className={style.textWrapper}>

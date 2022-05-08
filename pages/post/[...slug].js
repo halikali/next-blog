@@ -12,7 +12,7 @@ const PostDetailPage = () => {
         A few words about this blog platform, Ghost, and how this site was made
       </h1>
       <p className={style.spotText}>
-        Why Ghost (& Figma) instead of Medium, WordPress or other options?
+        Why Ghost and Figma instead of Medium, WordPress or other options?
       </p>
       <div className={style.landingImageWrapper}>
         <Image
@@ -23,6 +23,7 @@ const PostDetailPage = () => {
           height={300}
           layout="responsive"
           className={style.image}
+          alt="Landing Post"
         />
       </div>
       <div className={style.tabletRow}>
@@ -31,9 +32,10 @@ const PostDetailPage = () => {
         </div>
         <h2 className={style.subtitle}>Nextt on the pipeline</h2>
         <p>
-          This lovely web is full of everything which is created I don't know
-          what in mind, considering that sometimes totally bonkers stuff might
-          be highly relevant if it has the right kind of thinking behind it. 
+          This lovely web is full of everything which is created I don&apos;t
+          know what in mind, considering that sometimes totally bonkers stuff
+          might be highly relevant if it has the right kind of thinking behind
+          it.
         </p>
       </div>
       <div className={style.contentImageWrapper}>
@@ -47,20 +49,22 @@ const PostDetailPage = () => {
           className={style.image}
           objectFit="cover"
           objectPosition={"center"}
+          alt="Landing Post"
         />
       </div>
       <div className={style.tabletRow}>
         <p>
-          This lovely web is full of everything which is created I don't know
-          what in mind, considering that sometimes totally bonkers stuff might
-          be highly relevant if it has the right kind of thinking behind it. 
+          This lovely web is full of everything which is created I don&apos;t
+          know what in mind, considering that sometimes totally bonkers stuff
+          might be highly relevant if it has the right kind of thinking behind
+          it.
           <br />
           <br />
           Luckily, in the middle of all that, there are some pockets of content
           that offer delightfully valuable contrast to cursory wisdom in some of
           the established channels.
         </p>
-        <p className={style["label","shareLabel"]}>share:</p>
+        <p className={style[("label", "shareLabel")]}>share:</p>
         <div className={style.contentPadding}>
           <Share />
         </div>

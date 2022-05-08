@@ -5,7 +5,7 @@ import style from "./Post.module.scss";
 
 const Post = () => {
   return (
-    <Link href={"/post/d"}>
+    <Link href={"/post/d"} passHref>
       <div className={style.post}>
         <div className={style.imageWrapper}>
           <Image
@@ -16,6 +16,7 @@ const Post = () => {
             src={
               "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             }
+            alt="Post"
           />
         </div>
         <div className={style.titleWrapper}>

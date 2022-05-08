@@ -22,6 +22,7 @@ const Footer = () => {
             width={230}
             height={22}
             layout="responsive"
+            alt="brand logo"
           />
         </div>
         <p className={style.description}>
