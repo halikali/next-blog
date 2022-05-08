@@ -29,11 +29,7 @@
   background-color: black;
 
   &:nth-child(2) {
-    margin-left: 2rem;
-
-    @include media(tablet) {
-      margin-left: 5rem;
-    }
+    margin-left: 5rem;
   }
 
   &::after {
