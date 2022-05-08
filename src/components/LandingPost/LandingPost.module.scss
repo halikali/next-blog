@@ -2,6 +2,7 @@
 
 .LandingPost {
   width: 100%;
+  cursor: pointer;
 
   @include media(web) {
     margin: auto;
