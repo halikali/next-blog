@@ -63,7 +63,7 @@
     }
 
     @include media(web) {
-      width: 100rem;
+      width: 110rem;
       height: 57rem;
       margin: 3rem auto;
     }
@@ -133,7 +133,7 @@
 
 .tabletRow {
   @include media(tablet) {
-    width: 70%;
+    width: 50%;
     margin: auto;
   }
 }
