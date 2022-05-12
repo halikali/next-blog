@@ -8,7 +8,6 @@ import WhatToRead from "../../src/components/WhatToRead/WhatToRead";
 import style from "./PostDetailPage.module.scss";
 
 const PostDetailPage = ({ post }) => {
-
   <Head>
     <title>{post?.title}</title>
   </Head>;
