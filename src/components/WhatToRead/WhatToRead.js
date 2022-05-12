@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
+import sanityClient from "../../../sanity";
 import Post from "../Post/Post";
 import style from "./WhatToRead.module.scss";
 
@@ -7,6 +8,7 @@ const WhatToRead = () => {
   const eye1 = useRef(null);
   const eye2 = useRef(null);
   const [deg, setDeg] = useState(0);
+  const [randomizedItems, setRandomizedItems] = useState([]);
 
   const eyesRefs = [eye1.current, eye2.current];
 
@@ -21,6 +23,43 @@ const WhatToRead = () => {
         setDeg(deg);
       });
   };
+
+  const fetchPosts = () => {
+    function getRandomItem(arr) {
+      const randomIndex = Math.floor(Math.random() * arr.length);
+      const randomIndex2 = Math.floor(Math.random() * arr.length);
+      const randomIndex3 = Math.floor(Math.random() * arr.length);
+      setRandomizedItems([
+        arr[randomIndex],
+        arr[randomIndex2],
+        arr[randomIndex3],
+      ]);
+    }
+
+    const query = `*[_type == "post"]{
+     slug,
+     _id,
+     title,
+      mainImage{
+        asset->{
+          _id,
+          url
+        }
+      }
+    } `;
+
+    sanityClient.fetch(query).then((bikes) => {
+      getRandomItem(bikes);
+    });
+  };
+
+  useEffect(() => {
+    fetchPosts();
+
+    return () => {
+      setRandomizedItems([]);
+    };
+  }, []);
 
   return (
     <div className={style.container} onMouseMove={(e) => eyeTracker(e)}>
@@ -45,9 +84,9 @@ const WhatToRead = () => {
       <h4 className={style.title}>What to read next</h4>
 
       <div className={style.postWrapper}>
-        <Post />
-        <Post />
-        <Post />
+        {randomizedItems.map((post, i) => (
+          <Post post={post} key={i} />
+        ))}
       </div>
     </div>
   );

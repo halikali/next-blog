@@ -19,11 +19,15 @@
   }
 
   .popularPostsWrapper {
-
     @include media(tablet) {
-      column-count: 2;
-      column-gap: 2rem;
+      display: flex;
+      width: 100%;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      div {
+        width: calc(75rem / 2 - 2rem);
+      }
     }
-    
   }
 }
