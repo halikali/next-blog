@@ -1,36 +1,26 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import style from "./LandingPost.module.scss";
 
-const LandingPost = () => {
+const LandingPost = ({ post }) => {
   return (
-    <Link href={"post/d"} passHref >
+    <Link href={`/post/${post.slug.current}_${post?._id}`} passHref>
       <div className={style.LandingPost}>
         <div className={style.imageWrapper}>
-          <Image
-            src={
-              "https://images.unsplash.com/photo-1651388391926-228ef4a04929?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-            }
-            width={200}
-            height={200}
-            layout="responsive"
+          <img
+            src={post.mainImage.asset.url}
             className={style.image}
-            loading={`lazy`}
             alt="Landing Post"
           />
         </div>
         <div className={style.landingPostBody}>
           <h1 className={style.title}>
             <Link href={"/"}>
-              <a>
-                A few words about this blog platform, Ghost, and how this site
-                was made
-              </a>
+              <a>{post.title}</a>
             </Link>
           </h1>
           <p className={style.spotText}>
-            Why Ghost (& Figma) instead of Medium, WordPress or other options?
+            {Array.from(post.body[0].children).map((child) => child.text)}
           </p>
         </div>
       </div>
