@@ -3,7 +3,12 @@
 .post {
   margin-bottom: 3em;
   cursor: pointer;
-  
+
+  @include media(tablet) {
+    height: 30.7rem;
+    overflow: hidden;
+  }
+
   .imageWrapper {
     width: 100%;
     height: 20rem;
@@ -27,6 +32,10 @@
     .title {
       padding-top: 2.2rem;
       font-size: 2.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 }
