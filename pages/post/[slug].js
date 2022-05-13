@@ -8,10 +8,6 @@ import WhatToRead from "../../src/components/WhatToRead/WhatToRead";
 import style from "./PostDetailPage.module.scss";
 
 const PostDetailPage = ({ post }) => {
-  <Head>
-    <title>{post?.title}</title>
-  </Head>;
-
   const authorInfo = {
     name: post?.author?.name,
     avatarUrl: post?.author?.image?.asset?.url,
@@ -29,48 +25,54 @@ const PostDetailPage = ({ post }) => {
   };
 
   return (
-    <div className={`${style.PostDetailPage} detail-page`}>
-      <h1 className={style.title}>{post?.title}</h1>
-      <p className={style.spotText}>
-        {Array.from(post?.body[0].children).map((child) => child.text)}
-      </p>
-      <div className={style.landingImageWrapper}>
-        <img
-          className={style.image}
-          src={post?.mainImage?.asset?.url}
-          alt="Post"
-        />
-      </div>
-      <div className={style.tabletRow}>
-        <div className={style.contentPadding}>
-          <Author info={authorInfo} />
+    <>
+      <Head>
+        <title>{post?.title}</title>
+      </Head>
+
+      <div className={`${style.PostDetailPage} detail-page`}>
+        <h1 className={style.title}>{post?.title}</h1>
+        <p className={style.spotText}>
+          {Array.from(post?.body[0].children).map((child) => child.text)}
+        </p>
+        <div className={style.landingImageWrapper}>
+          <img
+            className={style.image}
+            src={post?.mainImage?.asset?.url}
+            alt="Post"
+          />
         </div>
-        <SanityBlockContent
-          blocks={post?.body}
-          serializers={serializers}
-          projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
-          dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-        />
-      </div>
-      <div className={style.tabletRow}>
-        <p className={style[("label", "shareLabel")]}>share:</p>
-        <div className={style.contentPadding}>
-          <Share />
+        <div className={style.tabletRow}>
+          <div className={style.contentPadding}>
+            <Author info={authorInfo} />
+          </div>
+          <SanityBlockContent
+            blocks={post?.body}
+            serializers={serializers}
+            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+            dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+          />
         </div>
-        <div className={style.tagsWrapper}>
-          <p className={style.label}>Tags:</p>
-          <ul className={style.tagsList}>
-            <li>
-              <a>product design</a>
-            </li>
-            <li>
-              <a>culture</a>
-            </li>
-          </ul>
+        <div className={style.tabletRow}>
+          <p className={style[("label", "shareLabel")]}>share:</p>
+          <div className={style.contentPadding}>
+            <Share />
+          </div>
+          <div className={style.tagsWrapper}>
+            <p className={style.label}>Tags:</p>
+            <ul className={style.tagsList}>
+              <li>
+                <a>product design</a>
+              </li>
+              <li>
+                <a>culture</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <WhatToRead />
       </div>
-      <WhatToRead />
-    </div>
+    </>
   );
 };
 
