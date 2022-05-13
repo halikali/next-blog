@@ -39,7 +39,7 @@ const PostDetailPage = ({ post }) => {
           <img
             className={style.image}
             src={post?.mainImage?.asset?.url}
-            alt="Post"
+            alt={post?.title}
           />
         </div>
         <div className={style.tabletRow}>

@@ -10,7 +10,7 @@ const LandingPost = ({ post }) => {
           <img
             src={post.mainImage.asset.url}
             className={style.image}
-            alt="Landing Post"
+            alt={post?.title}
           />
         </div>
         <div className={style.landingPostBody}>
