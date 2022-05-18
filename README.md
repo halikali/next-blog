@@ -84,4 +84,4 @@ NEXT_PUBLIC_SANITY_TOKEN="sanity-auth-token"
 
 You can view the client on [`http://localhost:3000`](http://localhost:3000)
 
-:green_circle: Congratulations! Project run successfully:green_circle: 
+:green_circle: Congratulations! Project run successfully :green_circle: 
