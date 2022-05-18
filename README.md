@@ -20,7 +20,7 @@ The design of this blog site is a code version of a design file I found on Figma
 
 [**Deployed version of the project**](https://next-blog-with-sanity-phixqvqj0-halikali.vercel.app/)
 
-[**The design file of the project on Figma**](https://www.figma.com/file/vV4kRho0FVmqISjQAXyjrv/A-blog-template-(Community)?node-id=0%3A1)
+[**The design file of the project on Figma**](https://www.figma.com/community/file/825069539366152961)
 
 
 ## Getting Started
