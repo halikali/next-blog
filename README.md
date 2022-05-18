@@ -1,34 +1,87 @@
+
+# Next.js Blog Website
+This project is a simple blog website sample, study made to understand the working logic of next.js.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Tech Stack
+
+- React
+- Next
+- **CMS** - [Sanity.io](https://www.sanity.io/)
+- SCSS
+- CSS Modules
+
+
+## Demo
+
+The design of this blog site is a code version of a design file I found on Figma. A few minor changes have been made. 
+
+[**Deployed version of the project**](https://next-blog-with-sanity-phixqvqj0-halikali.vercel.app/)
+
+[**The design file of the project on Figma**](https://www.figma.com/file/vV4kRho0FVmqISjQAXyjrv/A-blog-template-(Community)?node-id=0%3A1)
+
+
+## Getting Started
+Make sure you follow the steps below in order
+
+## Run Locally
+
+1. Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/halikali/next-blog.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Open the repository you cloned using your code editor or
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+  cd next-blog
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. Install dependencies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  npm install
+```
 
-## Learn More
+4. Install the Sanity.io cli
+```bash
+  npm install -g @sanity/client
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Create an .env file in the project root directory and Make the following variable definitions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_SANITY_DATASET=production \
+NEXT_PUBLIC_SANITY_PROJECT_ID="your-project-id" \
+NEXT_PUBLIC_SANITY_TOKEN="sanity-auth-token"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**[You can find your "your-project-id" and "sanity-auth-token" values here](https://www.sanity.io/manage)**
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. Follow the steps below
+```bash
+  sanity init
+```
+  ✨ Enter key is used to make selection.
+  - Select the Create new project option
+  - Give the project a name and confirm the selection with the enter key.
+  - For question **Use the default dataset configuration? (Y/n)**, press "y" key and confirm with enter key 
+  - **Project output path:** You can skip the phase with the enter key.
+  - For question **Select project template**, select the blog schema option
+  - Sanity.io must have created a file for you. You can open this file with the cd/"project-name" command on the terminal screen.
+  - You can run the CMS with the `sanity start` command.
+  - You can view the CMS on [`http://localhost:3333`]( http://localhost:3333)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+:warning: :warning:You must login to the account you are logged into in the `sanity init` command window. Be careful not to log in with different login options.
+
+7. Start the server
+
+```bash
+  npm run dev
+```
+
+You can view the client on [`http://localhost:3000`](http://localhost:3000)
+
+:green_circle: Congratulations! Project run successfully:green_circle: 
