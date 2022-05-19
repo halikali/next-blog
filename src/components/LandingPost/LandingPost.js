@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import style from "./LandingPost.module.scss";
@@ -7,10 +8,13 @@ const LandingPost = ({ post }) => {
     <Link href={`/post/${post.slug.current}_${post?._id}`} passHref>
       <div className={style.LandingPost}>
         <div className={style.imageWrapper}>
-          <img
-            src={post.mainImage.asset.url}
+          <Image
+            layout="responsive"
+            width={160}
+            height={90}
             className={style.image}
             alt={post?.title}
+            src={post?.mainImage?.asset.url}
           />
         </div>
         <div className={style.landingPostBody}>
