@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import style from "./Post.module.scss";
 
@@ -7,10 +8,13 @@ const Post = ({ post }) => {
     <Link href={`/post/${post?.slug.current}_${post?._id}`} passHref>
       <div className={style.post}>
         <div className={style.imageWrapper}>
-          <img
+          <Image
+            src={post?.mainImage?.asset.url}
+            width={160}
+            height={90}
+            layout="responsive"
+            alt={post?.title}
             className={style.image}
-            src={post?.mainImage?.asset?.url}
-            alt="Post"
           />
         </div>
         <div className={style.titleWrapper}>
