@@ -3,17 +3,25 @@ import Image from "next/image";
 import style from "./Footer.module.scss";
 
 const Footer = () => {
+  const categories = [
+    "Growth",
+    "Strategy",
+    "Suspense",
+    "Creativity",
+    "UX design",
+    "Remote work",
+    "Distributed teams",
+    "Digital product design",
+  ];
+
   return (
     <footer className={style.footer}>
       <ul className={style.categoriesWrapper}>
-        <li className={style.category}>Growth</li>
-        <li className={style.category}>Strategy</li>
-        <li className={style.category}>Suspense</li>
-        <li className={style.category}>Creativity</li>
-        <li className={style.category}>UX design</li>
-        <li className={style.category}>Remote work</li>
-        <li className={style.category}>Distributed teams</li>
-        <li className={style.category}>Digital product design</li>
+        {categories.map((item, index) => (
+          <li className={style.category} key={index}>
+            {item}
+          </li>
+        ))}
       </ul>
       <div className={style.textWrapper}>
         <div className={style.iconWrapper}>
