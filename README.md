@@ -18,7 +18,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 The design of this blog site is a code version of a design file I found on Figma. A few minor changes have been made. 
 
-[**Deployed version of the project**](https://next-blog-with-sanity-phixqvqj0-halikali.vercel.app/)
+[**Deployed version of the project**](https://next-blog-with-sanity-q7inycpie-halikali.vercel.app/)
 
 [**The design file of the project on Figma**](https://www.figma.com/community/file/825069539366152961)
 
