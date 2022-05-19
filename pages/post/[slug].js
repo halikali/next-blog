@@ -1,5 +1,6 @@
 import SanityBlockContent from "@sanity/block-content-to-react";
 import Head from "next/head";
+import Image from "next/image";
 
 import sanityClient from "../../sanity";
 import Author from "../../src/components/Author/Author";
@@ -36,10 +37,13 @@ const PostDetailPage = ({ post }) => {
           {Array.from(post?.body[0].children).map((child) => child.text)}
         </p>
         <div className={style.landingImageWrapper}>
-          <img
+          <Image
+            layout="responsive"
+            width={200}
+            height={90}
             className={style.image}
-            src={post?.mainImage?.asset?.url}
             alt={post?.title}
+            src={post?.mainImage?.asset.url}
           />
         </div>
         <div className={style.tabletRow}>
